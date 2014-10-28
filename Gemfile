@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
 # Better Errors replaces the standard Rails error page with a much better and more useful error page
 # Binding of Caller creates advance features for Better Errors gem
@@ -34,14 +34,14 @@ group :development do
 end
 
 # Spell check for ruby
-gem 'did_you_mean', group: [:development, :test]
+# gem 'did_you_mean', group: [:development, :test]
 
-group :test, :development do
-  gem "rspec-rails"
-  gem "guard-rspec"
-  gem "factory_girl_rails"
-  gem "capybara"
-end
+# group :test, :development do
+#   gem "rspec-rails"
+#   gem "guard-rspec"
+#   gem "factory_girl_rails"
+#   gem "capybara"
+# end
 
 # Required to deploy to Heroku
 gem 'rails_12factor', group: :production

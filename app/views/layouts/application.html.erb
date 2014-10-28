@@ -2,19 +2,27 @@
 <html>
 <head>
   <title>Rate It!</title>
-  <%= stylesheet_link_tag    '/stylesheets/reset.css', media: 'all' %>
-  <%= stylesheet_link_tag    '/stylesheets/style.css', media: 'all' %>
+  <%= stylesheet_link_tag    'normalize', media: 'all' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag       'favicon.ico' %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Rate It!</h1>
+  <div class="container">
+    <div class="row">
+      <div class="page-header">
+          <h1><a href="/">Rate It!</a>
+            <small>Rating the Best of Everything</small>
+          </h1>
+      </div><!--page header-->
+    </div> <!--row-->
     </header>
+
     <%= yield %>
-  </main>
+
+  </div><!--container-->
 </body>
 </html>
