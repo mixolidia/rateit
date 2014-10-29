@@ -1,11 +1,21 @@
-<%= bootstrap_form_for @album do |f| %>
+<form role="form">
+  <%= form_for @album do |f| %>
+    <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+    </div><!--form-group-->
 
-      <%= f.text_field :title %>
+    <div class="form-group">
+        <%= f.label :artist %>
+        <%= f.text_field :artist, class: "form-control" %>
+    </div><!--form-group-->
 
-      <%= f.text_field :artist %>
+    <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+    </div><!--form-group-->
+    
+        <%= f.submit "Save" %>
 
-      <%= f.text_area :description %>
-
-      <%= f.submit "Save" %>
-
-<% end %>
+  <% end %>
+</form>

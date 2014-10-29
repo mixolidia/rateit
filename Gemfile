@@ -38,7 +38,7 @@ end
 
 # Rails Bootstrap Forms is a rails form builder that makes it super easy to
 # integrate twitter bootstrap-style forms into your rails application.
-gem 'bootstrap_form'
+# gem 'bootstrap_form'
 
 # group :test, :development do
 #   gem "rspec-rails"
