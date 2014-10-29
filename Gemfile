@@ -34,18 +34,18 @@ group :development do
 end
 
 # Spell check for ruby
-gem 'did_you_mean', group: [:development, :test]
+# gem 'did_you_mean', group: [:development, :test]
 
 # Rails Bootstrap Forms is a rails form builder that makes it super easy to
 # integrate twitter bootstrap-style forms into your rails application.
 gem 'bootstrap_form'
 
-group :test, :development do
-  gem "rspec-rails"
-  gem "guard-rspec"
-  gem "factory_girl_rails"
-  gem "capybara"
-end
+# group :test, :development do
+#   gem "rspec-rails"
+#   gem "guard-rspec"
+#   gem "factory_girl_rails"
+#   gem "capybara"
+# end
 
 # Required to deploy to Heroku
 gem 'rails_12factor', group: :production

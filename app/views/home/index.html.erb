@@ -2,16 +2,22 @@
 
   <div class="col-md-4">
     <h3>Top Ten Albums</h3>
-    
-
-  </div>
+      <% @albums.each do |album| %>
+          <h2><%= album.title  %></h2><small><%= album.rating  %></small>
+      <% end %>
+    <%= link_to "View More Albums", home_path %>
+  </div><!--albums col-md-4-->
 
   <div class="col-md-4">
     <h3>Top Ten Books</h3>
-  </div>
+    <% @books  %>
+    <%= link_to "View More Books", home_path %>
+  </div><!--books col-md-4-->
 
   <div class="col-md-4">
     <h3>Top Ten Movies</h3>
-  </div>
+    <% @movies  %>
+    <%= link_to "View More Movies", home_path %>
+  </div><!--movies col-md-4-->
 
 </div><!--row-->
