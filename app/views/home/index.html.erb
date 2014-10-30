@@ -3,7 +3,7 @@
   <div class="col-md-4">
     <h3>Top Ten Albums</h3>
       <% @albums.each do |album| %>
-          <h2><%= album.title  %></h2><small><%= album.rating  %></small>
+          <h2><%= link_to album.title, album  %></a><small><%= album.rating  %></small></h2>
       <% end %>
     <%= link_to "View More Albums", home_path %>
   </div><!--albums col-md-4-->

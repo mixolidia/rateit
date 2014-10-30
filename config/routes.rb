@@ -3,13 +3,17 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get "/", to: 'home#index', as: :home
-
-  get "/albums/new", to: 'albums#new', as: :new
-  post "/albums", to: "albums#create", as: :albums
-
-  get "albums/:id", to: "albums#show", as: :album
-
   root to: 'home#index'
+
+  get "/albums/new",          to: 'albums#new',    as: :new
+  post "/albums",             to: "albums#create", as: :albums
+
+  get "/albums/:id",          to: "albums#show",  as: :album
+  get "/albums/edit/:id",     to: "albums#edit",  as: :album_edit
+  get "/albums/upvote/:id",   to: "album#upvote"
+  patch "/albums/update/:id", to: "album#upvote"
+
+  resources :albums
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

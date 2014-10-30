@@ -14,7 +14,19 @@ class AlbumsController < ApplicationController
     end
 
     def show
-      
+      @album = Album.find(params[:id])
+    end
+
+    def edit
+      @album = Album.find(params[:id])
+    end
+
+    def upvote
+      @album = Album.find(params[:id])
+      @album.votes.create
+      redirect_to(album_path)
+      # @album.rating += 1
+      # @album.save
     end
 
 end

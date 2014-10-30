@@ -22,9 +22,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-# gem 'spring',        group: :development
-
 # Better Errors replaces the standard Rails error page with a much better and more useful error page
 # Binding of Caller creates advance features for Better Errors gem
 # The binding_of_caller gem provides the Binding#of_caller method.
@@ -33,19 +30,16 @@ group :development do
   gem "binding_of_caller"
 end
 
-# Spell check for ruby
-# gem 'did_you_mean', group: [:development, :test]
-
 # Rails Bootstrap Forms is a rails form builder that makes it super easy to
 # integrate twitter bootstrap-style forms into your rails application.
 # gem 'bootstrap_form'
 
-# group :test, :development do
-#   gem "rspec-rails"
-#   gem "guard-rspec"
-#   gem "factory_girl_rails"
-#   gem "capybara"
-# end
+group :test, :development do
+  gem "rspec-rails"
+  gem "guard-rspec"
+  gem "factory_girl_rails"
+  gem "capybara"
+end
 
 # Required to deploy to Heroku
 gem 'rails_12factor', group: :production
