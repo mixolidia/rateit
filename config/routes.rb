@@ -8,12 +8,11 @@ Rails.application.routes.draw do
   get "/albums/new",          to: 'albums#new',    as: :new
   post "/albums",             to: "albums#create", as: :albums
 
-  get "/albums/:id",          to: "albums#show",  as: :album
-  get "/albums/edit/:id",     to: "albums#edit",  as: :album_edit
-  get "/albums/upvote/:id",   to: "album#upvote"
-  patch "/albums/update/:id", to: "album#upvote"
+  get "/albums/:id",            to: "albums#show",     as: :album
+  get "/albums/edit/:id",       to: "albums#edit",     as: :album_edit
+  patch "/albums/upvote/:id",   to: "albums#upvote",   as: :album_upvote
+  # patch "/albums/:id",        to: "albums#update"
 
-  resources :albums
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

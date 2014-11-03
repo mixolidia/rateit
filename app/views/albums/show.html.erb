@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1><%= @album.title %> <small>Artist: <%= @album.artist %></small></h1>
+    <h4>Rating: <%= @album.rating %></h4>
+    <p>Description</p>
+
+    <%= link_to "Upvote", album_upvote_path(@album), method:"patch" %>
+  </div><!--col-lg-12-->
+</div><!--row-->
